@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>
+        Index page
+    </title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Username</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}">Id</td>
+            <td th:text="${user.fullName}">Full name</td>
+            <td th:text="${user.username}">Username</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
